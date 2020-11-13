@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List</h2>
+
+@*https://stackoverflow.com/a/10522237*@
+<ul>
+    @foreach (var teacher in ViewBag.ListTeachers)
+    {
+        <li>@teacher</li>
+    }
+</ul>
+
