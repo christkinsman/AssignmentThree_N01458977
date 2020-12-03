@@ -4,12 +4,10 @@
 }
 
 <h2>List</h2>
-
-@*https://stackoverflow.com/a/10522237*@
 <ul>
     @foreach (var teacher in ViewBag.ListTeachers)
     {
-        <li>@teacher</li>
+        <li>@teacher.TeacherFname @teacher.TeacherLname</li>
     }
 </ul>
 

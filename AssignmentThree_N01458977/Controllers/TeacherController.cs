@@ -23,21 +23,16 @@ namespace AssignmentThree_N01458977.Controllers
         public ActionResult Show(int? id)
         {
 
-            if (id == null) ViewBag.Teachers = "Unknown";
+            Models.Teacher NewTeacher = null;
+
+            if (id == null) NewTeacher = null;
             else
             {
                 TeacherDataController controller = new TeacherDataController();
-                ViewBag.Teachers = controller.ShowTeacher((int)id);
+                NewTeacher = controller.ShowTeacher((int)id);
             }
 
-            if (id == null) ViewBag.TeacherClass = "Unknown";
-            else
-            {
-                TeacherDataController controller = new TeacherDataController();
-                ViewBag.TeacherClass = controller.ShowTeacherClass((int)id);
-            }
-
-            return View();
+            return View(NewTeacher);
         }
 
 

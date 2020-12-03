@@ -1,4 +1,4 @@
-﻿
+﻿@model AssignmentThree_N01458977.Models.Teacher
 @{
     ViewBag.Title = "Show";
 }
@@ -6,7 +6,9 @@
 <h2>Show</h2>
 
 <h3>Teacher Name:</h3>
-<p>@ViewBag.Teachers</p>
+<p>@Model.TeacherFname @Model.TeacherLname</p>
 
 <h3>Teaching:</h3>
-<p>@ViewBag.TeacherClass</p>
+<p>@Model.TeacherClass</p>
+
+ 
